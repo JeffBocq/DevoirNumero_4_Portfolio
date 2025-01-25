@@ -1,29 +1,66 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import ImageWithLink from './components/ImageWithLink.vue'
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
+    <ImageWithLink obj_img_alt="Home" obj_link_target="_top" obj_link_href="/" obj_img_src="/src/assets/ArtDecoHome.webp" />
+    <div>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/vuehome">VueHome</RouterLink>
+        <RouterLink to="/vueabout">VueAbout</RouterLink>
       </nav>
     </div>
   </header>
 
+  <!-- On laisse le router mettre sa part à cet endroit -->
+  <!-- si racine alors HomeView.vue -->
+  <!-- si about  alors AbourView.vue -->
   <RouterView />
+
+  <!-- On va mettre un footer -->
+  <footer> 
+    <DIV style="flex-direction: column; align-self: center;">
+        <DIV style="display:flex; flex-direction:row">
+            <ImageWithLink obj_img_alt="Linkez-moi" obj_link_target="_blank" obj_link_href="https://www.linkedin.com/in/jean-fran%C3%A7ois-bocquet-88633430/" obj_img_src="/src/assets/linkedin.png" />
+            <ImageWithLink obj_img_alt="Likez-moi" obj_link_target="_blank" obj_link_href="https://www.facebook.com/jeanfrancois.bocquet.18/" obj_img_src="/src/assets/facebook.png" />
+            <ImageWithLink obj_img_alt="Gittez-moi" obj_link_target="_blank" obj_link_href="https://github.com/JeffBocq" obj_img_src="/src/assets/signe-github.png" />
+        </DIV>
+        <DIV>
+            <p class="writeInWhite">Dernière mise à jour le <time datetime="2025-01-28">28/01/2025</time></p> 
+        </DIV>
+    </DIV>    
+  </footer>
+
 </template>
 
 <style scoped>
+
+footer{
+  display: flex;
+  flex-direction:column;
+  background-color: #782221;
+  color: white;
+  padding: 15px;
+}
+
+.link2SocialNetwork:hover{
+  opacity: 40%;
+}
+
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  display: flex;
+  flex-direction:row;
+  /* background-color: #782221; */
+  background-color: aquamarine;
+  /* color: white; */
+  padding: 15px;
+  /* line-height: 1.5;
+  max-height: 100vh; */
 }
 
 .logo {
