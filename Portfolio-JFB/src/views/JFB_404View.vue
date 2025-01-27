@@ -12,4 +12,20 @@
     align-items: center;
   }
 }
+
+.nothinghere { /** correction locale du CSS  */
+  background-image: url('src/assets/Fond_404.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*
+  background-position: right;
+  background-color: lightgray; */
+  min-height: 700px;
+}
+
+.nothinghere h1 {
+  font-size:50px;
+}
+
+
 </style>

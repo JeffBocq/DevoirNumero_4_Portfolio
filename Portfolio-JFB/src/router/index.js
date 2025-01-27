@@ -18,18 +18,7 @@ const router = createRouter({
     {
       path: '/about',
       name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: JFB_AboutView,
-    },
-    {
-      path: '/else',
-      name: 'else',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: JFB_404View,
     },
     {
       path: '/vuehome',
@@ -40,6 +29,11 @@ const router = createRouter({
       path: '/vueabout',
       name: 'vueabout',
       component: VUE_AboutView,
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'else',
+      component: JFB_404View,
     },
   ],
 })

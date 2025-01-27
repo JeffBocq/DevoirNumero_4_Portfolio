@@ -12,4 +12,9 @@
     align-items: center;
   }
 }
+
+.classOfTheBody { /** correction locale du CSS  */
+  background-image: none;
+
+}
 </style>
