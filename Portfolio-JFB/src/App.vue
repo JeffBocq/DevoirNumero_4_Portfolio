@@ -24,16 +24,16 @@ import ImageWithLink from './components/ImageWithLink.vue'
 
   <!-- On va mettre un footer -->
   <footer> 
-    <DIV style="flex-direction: column; align-self: center;">
-        <DIV style="display:flex; flex-direction:row">
+    <div style="flex-direction: column; align-self: center;">
+        <div style="display:flex; flex-direction:row">
             <ImageWithLink obj_img_alt="Linkez-moi" obj_link_target="_blank" obj_link_href="https://www.linkedin.com/in/jean-fran%C3%A7ois-bocquet-88633430/" obj_img_src="/src/assets/linkedin.png" />
             <ImageWithLink obj_img_alt="Likez-moi" obj_link_target="_blank" obj_link_href="https://www.facebook.com/jeanfrancois.bocquet.18/" obj_img_src="/src/assets/facebook.png" />
             <ImageWithLink obj_img_alt="Gittez-moi" obj_link_target="_blank" obj_link_href="https://github.com/JeffBocq" obj_img_src="/src/assets/signe-github.png" />
-        </DIV>
-        <DIV>
+        </div>
+        <div>
             <p class="writeInWhite">Dernière mise à jour le <time datetime="2025-01-28">28/01/2025</time></p> 
-        </DIV>
-    </DIV>    
+        </div>
+      </div>    
   </footer>
 
 </template>
@@ -55,12 +55,25 @@ footer{
 header {
   display: flex;
   flex-direction:row;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   /* background-color: #782221; */
   background-color: aquamarine;
   /* color: white; */
   padding: 15px;
   /* line-height: 1.5;
   max-height: 100vh; */
+}
+
+header_ancrage_fixe {
+  /* récupéré de https://www.codeur.com/tuto/html/ancre-lien-header-fixe/ */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
 }
 
 .logo {
@@ -92,7 +105,6 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-
 @media (min-width: 1024px) {
   header {
     display: flex;
